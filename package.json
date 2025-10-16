@@ -1,0 +1,60 @@
+{
+    "name": "hexo",
+    "version": "0.0.1",
+    "description": "Zang Ma Blog",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zcm-xx/zcm-xx.github.io"
+    },
+    "keywords": [
+        "NexT",
+        "Hexo",
+        "Zang Ma",
+        "Blog"
+    ],
+    "author": "Zang Ma<1759156488@qq.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/zcm-xx/zcm-xx.github.io/issues"
+    },
+    "homepage": "https://zcm-xx.github.io/",
+    "hexo": {
+        "version": "8.0.0"
+    },
+    "devDependencies": {
+        "browser-sync": "3.0.3",
+        "gulp": "5.0.0",
+        "gulp-htmlmin": "3.0.0",
+        "gulp-minify-css": "1.2.4",
+        "gulp-uglify": "3.0.2",
+        "start-server-and-test": "2.0.11"
+    },
+    "scripts": {
+        "start": "start-server-and-test dev http://0.0.0.0:4000 dev-proxy",
+        "predev": "echo '开启监听内容变动自动更新'",
+        "dev-proxy": "gulp",
+        "dev": "hexo clean && hexo generate && hexo server",
+        "predeploy": "echo '【【【Start deploy】】】'",
+        "deploy": "hexo clean && hexo generate && hexo deploy",
+        "postdeploy": "echo '【【【Finished deploy】】】'",
+        "prebuild": "echo 构建静态站点",
+        "build": "hexo clean && hexo generate"
+    },
+    "dependencies": {
+        "hexo": "^8.0.0",
+        "hexo-deployer-git": "^4.0.0",
+        "hexo-generator-archive": "^2.0.0",
+        "hexo-generator-category": "^2.0.0",
+        "hexo-generator-feed": "^3.0.0",
+        "hexo-generator-index": "^4.0.0",
+        "hexo-generator-search": "^2.4.3",
+        "hexo-generator-sitemap": "^3.0.1",
+        "hexo-generator-tag": "^2.0.0",
+        "hexo-renderer-ejs": "^2.0.0",
+        "hexo-renderer-marked": "^7.0.1",
+        "hexo-renderer-stylus": "^3.0.1",
+        "hexo-renderer-swig": "^2.0.0",
+        "hexo-server": "^3.0.0"
+    }
+}
