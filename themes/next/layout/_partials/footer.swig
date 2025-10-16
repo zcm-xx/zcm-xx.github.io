@@ -1,0 +1,28 @@
+<div class="copyright" >
+  {% set current = date(Date.now(), "YYYY") %}
+  &copy; {% if theme.since and theme.since != current %} {{ theme.since }} - {% endif %}
+  <span itemprop="copyrightYear">{{ current }}</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">{{ config.author }}</span>
+</div>
+<!--
+<div class="powered-by">
+  {{ __('footer.powered', '<a class="theme-link" href="https://hexo.io" target="_blank" rel="external nofollow">Hexo</a>') }}
+</div>
+
+<div class="theme-info">
+  {{ __('footer.theme') }} -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external nofollow">
+    Next.{{ theme.scheme }}
+  </a>
+</div>
+  
+  -->
+ <!-- TODO: 统计有问题
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count" style="color: #e90f92;">全站共 {{ symbolsCountTotal(site) }} 字</span>
+</div>
+ -->

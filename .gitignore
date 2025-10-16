@@ -1,0 +1,7 @@
+# ignore
+node_modules/
+.deploy_git/
+public/
+*.log
+db.json
+.DS_Store
