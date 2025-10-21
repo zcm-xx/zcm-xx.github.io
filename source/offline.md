@@ -7,7 +7,7 @@ comments: false
 ---
 <center>
 对不起，没有检测到网络连接
-你可以[点击此处](https://Neveryu.github.io)返回首页.
+你可以[点击此处](https://zcm-xx.github.io/)返回首页.
 
 </center>
 <blockquote class="blockquote-center">
