@@ -6,7 +6,7 @@
 favicon: /favicon/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT, Neveryu, Zang Ma, Blog, Node.js, Git, JAVA, JAVASCRIPT, HTML, CSS, Vue, React, Python, Go"
+keywords: "Hexo, NexT, Zang Ma, Blog, Node.js, Git, JAVA, JAVASCRIPT, HTML, CSS, Vue, React, Python, Go"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
