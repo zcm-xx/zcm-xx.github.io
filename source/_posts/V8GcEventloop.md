@@ -338,6 +338,9 @@ node --inspect app.js
 ```
 
 ### 3. 内存泄漏检测代码示例
+需要用以下命令来执行：
+node --expose-gc --experimental-strip-types 文件名 
+node --expose-gc 文件名
 
 ```javascript
 function detectMemoryLeak() {

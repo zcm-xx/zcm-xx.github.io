@@ -32,7 +32,7 @@ menu:
   archives: /archives
   categories: /categories
   tags: /tags
-  # guestbook: /guestbook
+  guestbook: /guestbook
   about: /about
   #example: /example
   #commonweal: /404
@@ -254,6 +254,22 @@ mathjax:
 # Disqus
 #disqus_shortname:
 
+# Giscus (GitHub Discussions)
+# Setup: https://giscus.app/zh-CN
+giscus:
+  enable: true
+  repo: zcm-xx/zcm-xx.github.io
+  repo_id: R_kgDOQDgMxg
+  category: General
+  category_id: DIC_kwDOQDgMxs4DBK1l
+  mapping: pathname
+  strict: 0
+  reactions_enabled: 1
+  emit_metadata: 0
+  input_position: bottom
+  theme: preferred_color_scheme
+  lang: zh-CN
+
 # Baidu Share
 Available value:
    button | slide
@@ -271,6 +287,11 @@ duoshuo_share: false
 # See: https://www.google.com/webmasters/
 #google_site_verification:
 
+# Baidu Webmaster tools verification setting
+# 1. 打开 https://ziyuan.baidu.com/ 添加站点 https://zcm-xx.github.io/
+# 2. 选择「HTML 标签验证」，复制 content="..." 里的字符串
+# 3. 取消下一行注释并粘贴验证码，例如：baidu_site_verification: codeva-xxxxxxxx
+#baidu_site_verification:
 
 # Google Analytics
 #google_analytics:

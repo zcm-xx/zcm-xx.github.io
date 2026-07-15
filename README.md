@@ -4,6 +4,15 @@
 
 博客仓库地址： [https://zcm-xx.github.io/](https://zcm-xx.github.io/)
 
+## Create Article
+
+```bash
+hexo new "我的新文章" # 新建文章
+hexo new post "标题" # 显式指定为 post 类型
+hexo new draft "标题" # 创建草稿（source/_drafts/）
+hexo new page "页面名" # 创建独立页面（如关于页）
+```
+
 ## Build Setup
 
 ```bash

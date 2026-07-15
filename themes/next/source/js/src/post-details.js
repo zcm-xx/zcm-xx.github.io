@@ -114,16 +114,24 @@ $(document).ready(function () {
 
   $('.post-toc a').on('click', function (e) {
     e.preventDefault();
-    var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
-    var offset = $(targetSelector).offset().top;
+    // TOC hrefs are percent-encoded; heading ids are not. Decode before selecting.
+    var href = this.getAttribute('href');
+    try {
+      href = decodeURI(href);
+    } catch (err) { /* keep raw href */ }
+    var targetSelector = NexT.utils.escapeSelector(href);
+    var offset = $(targetSelector).offset();
+    if (!offset) {
+      return;
+    }
 
     hasVelocity ?
       html.velocity('stop').velocity('scroll', {
-        offset: offset  + 'px',
+        offset: offset.top  + 'px',
         mobileHA: false
       }) :
       $('html, body').stop().animate({
-        scrollTop: offset
+        scrollTop: offset.top
       }, 500);
   });
 
