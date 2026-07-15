@@ -1,41 +1,25 @@
-{% if page.comments %}
-  <div class="comments" id="comments">
-  <!--
-  <div id="gitmentContainer" style="margin-bottom: -19px;"></div>
-    <link rel="stylesheet" href="/css/gitment.css">
-    <script src="/js/src/gitment.browser.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      var gitment = new Gitment({
-        id: 'blog-guestbook',
-        owner: 'Neveryu',
-        repo: 'Neveryu.github.io',
-        oauth: {
-          client_id: 'bbd367cf498321402719',
-          client_secret: '5d6b890500a2acaf7705495eee9c5ad12ed1f3d2',
-        },
-      })
-      gitment.render('gitmentContainer')
-    </script>
-
-    {% if (theme.duoshuo and theme.duoshuo.shortname) or theme.duoshuo_shortname %}
-      <div class="ds-thread" data-thread-key="{{ page.path }}"
-           data-title="{{ page.title }}" data-url="{{ page.permalink }}">
-      </div>
-    {% elseif theme.facebook_sdk.enable and theme.facebook_comments_plugin.enable %}
-      <div class="fb-comments"
-           data-href="{{ page.permalink }}"
-           data-numposts="{{ theme.facebook_comments_plugin.num_of_posts }}"
-           data-width="{{ theme.facebook_comments_plugin.width }}"
-           data-colorscheme="{{ theme.facebook_comments_plugin.scheme }}">
-      </div>
-    {% elseif theme.disqus_shortname %}
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    {% endif %}
-  -->
-  </div>
+{% if page.comments !== false %}
+  {% if theme.giscus and theme.giscus.enable and theme.giscus.repo_id and theme.giscus.category_id %}
+    <div class="comments" id="comments">
+      <script src="https://giscus.app/client.js"
+        data-repo="{{ theme.giscus.repo }}"
+        data-repo-id="{{ theme.giscus.repo_id }}"
+        data-category="{{ theme.giscus.category }}"
+        data-category-id="{{ theme.giscus.category_id }}"
+        data-mapping="{{ theme.giscus.mapping | default('pathname') }}"
+        data-strict="{{ theme.giscus.strict | default('0') }}"
+        data-reactions-enabled="{{ theme.giscus.reactions_enabled | default('1') }}"
+        data-emit-metadata="{{ theme.giscus.emit_metadata | default('0') }}"
+        data-input-position="{{ theme.giscus.input_position | default('bottom') }}"
+        data-theme="{{ theme.giscus.theme | default('preferred_color_scheme') }}"
+        data-lang="{{ theme.giscus.lang | default('zh-CN') }}"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </div>
+  {% elif theme.giscus and theme.giscus.enable %}
+    <div class="comments" id="comments">
+      <p>Giscus 尚未完成配置，请前往 <a href="https://giscus.app/zh-CN" target="_blank" rel="noopener">giscus.app</a> 获取 <code>repo_id</code> 与 <code>category_id</code>，并填入 <code>themes/next/_config.yml</code>。</p>
+    </div>
+  {% endif %}
 {% endif %}

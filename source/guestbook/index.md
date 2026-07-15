@@ -1,7 +1,7 @@
 ---
 title: guestbook
 date: 2025-10-01
-comments: false
+comments: true
 ---
 <blockquote class="blockquote-center">
     我相信，那一切都是种子，只有经过埋葬，才有生机。 
